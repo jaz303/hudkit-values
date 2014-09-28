@@ -1,0 +1,26 @@
+{
+  "name": "hudkit-values",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "tape": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test/all.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaz303/hudkit-values.git"
+  },
+  "author": "Jason Frame <jason@onehackoranother.com> (http://jasonframe.co.uk)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaz303/hudkit-values/issues"
+  },
+  "homepage": "https://github.com/jaz303/hudkit-values"
+}
