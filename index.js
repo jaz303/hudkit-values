@@ -1,6 +1,6 @@
 exports.property = function(name, value, transformer) {
 
-	transformer = transformer || function(v, set) { set(v); };
+	transformer = transformer || function(set, v) { set(v); };
 
 	var listeners = [];
 
@@ -12,13 +12,13 @@ exports.property = function(name, value, transformer) {
 			return value;
 		},
 
-		set: function(v) {
-			transformer(v, function(actualValue) {
+		set: function(newValue) {
+			transformer(function(actualValue) {
 				value = actualValue;
 				for (var i = 0, len = listeners.length; i < len; i += 2) {
 					listeners[i].call(listeners[i+1], value);
 				}
-			});
+			}, newValue, value);
 		},
 
 		connect: function(fn, ctx) {

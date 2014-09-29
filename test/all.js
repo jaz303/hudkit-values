@@ -12,7 +12,7 @@ test("property - get", function(assert) {
 
 test("property - set", function(assert) {
 
-	var p = values.property('foo', '', function(v, set) {
+	var p = values.property('foo', '', function(set, v) {
 		set(v.toUpperCase());
 	});
 
@@ -39,7 +39,7 @@ test("property - connect called immediately", function(assert) {
 
 test("property - connect", function(assert) {
 
-	var p = values.property('foo', 0, function(v, set) {
+	var p = values.property('foo', 0, function(set, v) {
 		set(v * 2);
 	});
 
